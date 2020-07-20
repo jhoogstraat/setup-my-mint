@@ -41,6 +41,8 @@ sudo apt install nodejs
 # Install Flutter
 git clone https://github.com/flutter/flutter.git -b dev --depth 1
 mv flutter ~/tools/flutter
+~/tools/flutter/bin/flutter config --no-analytics
+~/tools/flutter/bin/flutter doctor --android-licenses
 
 # Setup dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
