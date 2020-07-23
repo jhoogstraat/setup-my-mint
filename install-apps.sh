@@ -31,12 +31,6 @@ mkdir /opt/google
 tar xf android_studio.tar.gz 
 sudo mv android-studio /opt/google/android-studio
 
-# PDFSam Visual
-wget "https://github.com/torakiki/pdfsam-visual-public/releases/download/v2.1.7/pdfsam-visual_2.1.7_amd64.deb"
-sudo apt install ./pdfsam-visual_2.1.7_amd64.deb
-mkdir ~/.config/PDFsam\ Visual
-echo '{"autoReportErrors":"false","lang":"de","licenseKey":"PV3-E84EB78B-26EA-49EC-A938-2F269B752F89","licenseExpires":15967066053500,"licenseToken":"espSo+P57BSGiaYVZ8Ie9nR5jet1wBCu7cu6FcJGuSgLOqb87kSKeSY3fB+q+6tMktkB1HWF8JjmCBwnKGUSgQHDENon8E72mr413LDcCDY=","startPage":"visually-combine-reorder-pdf.ejs","splitByPages-outputPattern":"[CURRENTPAGE]-[BASENAME]","proxyServer":"","proxyUsr":"","proxyPwd":"","outputFolder":"SRC"}' > ~/.config/PDFsam\ Visual/pvp.pref
-
 # Alfred
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
