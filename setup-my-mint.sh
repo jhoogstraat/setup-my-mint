@@ -44,6 +44,18 @@ mv flutter ~/tools/flutter
 ~/tools/flutter/bin/flutter config --no-analytics
 ~/tools/flutter/bin/flutter doctor --android-licenses
 
+# Install Docker (Using Ubuntu 20.04 Focal Fossa Repository)
+sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo apt update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo adduser $USER docker
+
+# Install QEMU
+sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
+sudo adduser $USER kvm
+
 # Setup dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 git clone --bare https://github.com/jhoogstraat/oh-my-dotfiles $HOME/.dotfiles
