@@ -30,7 +30,14 @@ sudo fc-cache -fv
 # Install vim
 sudo apt install vim
 
-## Dev Tools
+# Install bpytop
+git clone https://github.com/aristocratos/bpytop.git
+cd bpytop
+sudo make install
+cd ..
+rm -rf ./bpytop
+
+####### Dev Tools #########
 mkdir ~/Developer
 mkdir ~/tools
 
@@ -39,7 +46,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
 
 # Install Flutter
-git clone https://github.com/flutter/flutter.git -b dev --depth 1
+git clone https://github.com/flutter/flutter.git --depth 1
 mv flutter ~/tools/flutter
 ~/tools/flutter/bin/flutter config --no-analytics
 ~/tools/flutter/bin/flutter doctor --android-licenses
@@ -55,6 +62,7 @@ sudo adduser $USER docker
 # Install QEMU
 sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
 sudo adduser $USER kvm
+
 
 # Setup dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
